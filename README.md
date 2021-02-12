@@ -1,14 +1,15 @@
 # chat-hound
-A tool that will help you find telegram or discord channels based off keyword searching.
+A tool that will hunt down telegram or discord channels based off keyword searching.
 
 ## Setup
-- install the version of [chromedriver](https://chromedriver.chromium.org/downloads) that matches the version of chrome installed on your computer and place the executable in `/usr/local/bin/`
+- Install the version of [chromedriver](https://chromedriver.chromium.org/downloads) that matches the version of chrome installed on your computer and place the executable in `/usr/local/bin/`
 
-- run ./dev/setup.sh
+- Run `./dev/setup.sh` to set up your virtual environment
 
 ## Usage
 
-- run `source env/bin/activate` to activate your virtual environment
+- Run `source env/bin/activate` to activate your virtual environment
+- For more verbose output, you can change the logger mode from `INFO` to `DEBUG` on line 12.
 
 ### Telegram
 ```
@@ -53,3 +54,26 @@ optional arguments:
                         Search engine to use (default Google)
 
 ```
+
+### Examples
+
+```
+(env) user@host:~/chat-hound$ ./chathound.py telegram -k fun -n 50 -o fun-telegram.csv
+[INFO] chathound.py: Searching for Telegram channels on Google using keyword fun
+[INFO] chathound.py: Number of links found so far: 9
+[INFO] chathound.py: Number of links found so far: 14
+[INFO] chathound.py: Number of links found so far: 22
+[INFO] chathound.py: Number of links found so far: 28
+[INFO] chathound.py: Number of links found so far: 30
+[INFO] chathound.py: Number of links found so far: 37
+[INFO] chathound.py: Number of links found so far: 43
+[INFO] chathound.py: Number of links found so far: 49
+[INFO] chathound.py: Number of links found so far: 54
+[INFO] chathound.py: Done finding links, now parsing info about each. Be patient, this takes time.
+[INFO] chathound.py: Writing 54 links to fun-telegram.csv
+
+```
+
+## Future Development
+- DuckDuckGo functionality (currently only Google)
+- `-n , --number` option is currently approximate and will be fixed
