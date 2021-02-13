@@ -1,5 +1,5 @@
 # chat-hound
-As more and more people move to chat services such as Telegram, it's becoming increasingly important to include these sources as part of your OSINT investigations. Chat-Hound is a tool that will hunt down telegram or discord chat rooms based off keyword searching. It will then parse information about these rooms and output findings to a CSV file. This tool should make it easier for an investigator to vet chatrooms for their investigations. 
+As more and more people move to chat services such as Telegram, it's becoming increasingly important to include these sources as part of your OSINT investigations. chat-hound is a tool that will hunt down telegram or discord chat rooms based off keyword searching. It will then parse information about these rooms and output findings to a CSV file. This tool should make it easier for an analyst to vet chatrooms for their investigations. 
 
 ## Setup
 - Install the version of [chromedriver](https://chromedriver.chromium.org/downloads) that matches the version of chrome installed on your computer and place the executable in `/usr/local/bin/`
