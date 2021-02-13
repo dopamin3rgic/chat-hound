@@ -22,13 +22,13 @@ def parse_commands():
 	sub_parser.add_argument("-o", "--output", metavar="<filename>", dest="output_file", help="Name of the output file (CSV)", default="telegram-links.csv")
 	sub_parser.add_argument("-n", "--number", metavar="<number>", dest="num_links", help="Number of links to find (default 100)", type=int, default=100)
 	sub_parser.add_argument("-s", "--search-engine", metavar="<search-engine>", dest="search_engine", help="Search engine to use (default Google)", choices=["Google", "DuckDuckGo"], default="Google")
-	sub_parser.add_argument("-k", "--key-word", metavar="<keyword>", dest="keyword", help="keyword to use when searching for links", required=True)
+	sub_parser.add_argument("-k", "--key-word", metavar="<keyword>", dest="keyword", help="Keyword to use when searching for links", required=True)
 	sub_parser.set_defaults(func=search_telegram)
 
 	sub_parser = subparsers.add_parser("discord", description="Find discord invites using keyword searching.")
 	sub_parser.add_argument("-o", "--output", metavar="<file>", dest="output_file", help="Name of the output file (CSV)", default="discord-links.csv")
 	sub_parser.add_argument("-n", "--number", metavar="<number>", dest="num_links", help="Number of links to find (default 100)", type=int, default=100)
-	sub_parser.add_argument("-k", "--key-word", metavar="<keyword>", dest="keyword", help="keyword to use when searching for links", required=True)
+	sub_parser.add_argument("-k", "--key-word", metavar="<keyword>", dest="keyword", help="Keyword to use when searching for links", required=True)
 	sub_parser.add_argument("-s", "--search-engine", metavar="<search-engine>", dest="search_engine", help="Search engine to use (default Google)", choices=["Google", "DuckDuckGo"], default="Google")
 	sub_parser.set_defaults(func=search_discord)
 

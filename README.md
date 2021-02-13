@@ -1,5 +1,5 @@
 # chat-hound
-A tool that will hunt down telegram or discord channels based off keyword searching.
+As more and more people move to chat services such as Telegram, it's becoming increasingly important to include these sources as part of your OSINT investigations. Chat-Hound is a tool that will hunt down telegram or discord chat rooms based off keyword searching. It will then parse information about these rooms and output findings to a CSV file. This tool should make it easier for an investigator to vet chatrooms for their investigations. 
 
 ## Setup
 - Install the version of [chromedriver](https://chromedriver.chromium.org/downloads) that matches the version of chrome installed on your computer and place the executable in `/usr/local/bin/`
@@ -58,8 +58,8 @@ optional arguments:
 ### Examples
 
 ```
-(env) user@host:~/chat-hound$ ./chathound.py telegram -k fun -n 50 -o fun-telegram.csv
-[INFO] chathound.py: Searching for Telegram channels on Google using keyword fun
+(env) user@host:~/chat-hound$ ./chathound.py telegram -k QAnon -n 50 -o QAnon-telegram.csv
+[INFO] chathound.py: Searching for Telegram channels on Google using keyword QAnon
 [INFO] chathound.py: Number of links found so far: 9
 [INFO] chathound.py: Number of links found so far: 14
 [INFO] chathound.py: Number of links found so far: 22
@@ -68,9 +68,9 @@ optional arguments:
 [INFO] chathound.py: Number of links found so far: 37
 [INFO] chathound.py: Number of links found so far: 43
 [INFO] chathound.py: Number of links found so far: 49
-[INFO] chathound.py: Number of links found so far: 54
+[INFO] chathound.py: Number of links found so far: 50
 [INFO] chathound.py: Done finding links, now parsing info about each. Be patient, this takes time.
-[INFO] chathound.py: Writing 54 links to fun-telegram.csv
+[INFO] chathound.py: Writing 50 links to QAnon-telegram.csv
 
 ```
 
